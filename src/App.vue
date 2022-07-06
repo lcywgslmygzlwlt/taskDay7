@@ -1,19 +1,20 @@
 <template>
-  <div>
-    <Phone> </Phone>
+  <div class="all">
+    <PhoneP> </PhoneP>
   </div>
 </template>
 
 <script>
-import Phone from './components/Phone.vue';
+import PhoneP from './components/PhoneP.vue';
 export default {
   data() {
     return {};
   },
   components: {
-    Phone,
+    PhoneP,
   },
 };
 </script>
 
-<style></style>
+<style lang="less" scoped>
+</style>

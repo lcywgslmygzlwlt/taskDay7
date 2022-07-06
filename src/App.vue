@@ -1,28 +1,38 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="id">
+    <van-button type="info" @click="change = 'Phone'">手机注册</van-button
+    ><van-button type="info" @click="change = 'Email'">邮箱注册</van-button>
+    <keep-alive>
+      <component :is="change">
+        <template v-slot:sj>
+          <van-field v-model="tel1" type="tel" label="手机号" />
+        </template>
+
+        <template v-slot:em>
+          <van-field v-model="tel" type="tel" label="邮箱" />
+        </template>
+      </component>
+    </keep-alive>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Phone from './components/zuoye1shouji.vue';
+import Email from './components/zuoye1youxiang.vue';
 export default {
-  name: 'App',
+  data() {
+    return {
+      change: 'Phone',
+      phone: '',
+      tel: '',
+      tel1: '',
+    };
+  },
   components: {
-    HelloWorld
-  }
-}
+    Email,
+    Phone,
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>

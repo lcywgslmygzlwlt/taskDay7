@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import App from './components/07.vue';
+import App from './test.vue';
 
 import Vant from 'vant';
 import 'vant/lib/index.css';

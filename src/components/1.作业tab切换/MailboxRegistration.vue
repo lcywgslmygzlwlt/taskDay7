@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <input type="checkbox" />中国大陆 <input type="checkbox" />中国香港
+    <input type="radio" />中国大陆 <input type="radio" />中国香港
     <div class="shouji">
       <p>手机号码</p>
       <!-- <input type="text" placeholder="请输入手机号" /> -->

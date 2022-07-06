@@ -1,7 +1,7 @@
 <template>
   <div class="all">
     <button class="title" @click="comName = 'NumP'">手机注册</button>
-    <button class="title" @click="comName = 'EmailP'">邮箱注册</button>
+    <!-- <button class="title" @click="comName = 'EmailP'">邮箱注册</button> -->
     <div>
       <component :is="comName"></component>
     </div>
@@ -27,7 +27,7 @@ export default {
 .all {
   padding: 40px 24px;
   height: 1000px;
-  background-color: rgb(224, 234, 243);
+  background-color: rgb(157, 195, 229);
 }
 .title {
   font-size: 30px;
